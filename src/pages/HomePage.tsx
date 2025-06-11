@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
-import Layout from "./Layout";
+import { FiClock } from "react-icons/fi";
 import { IoMdGlobe } from "react-icons/io";
 import { TbCheckupList } from "react-icons/tb";
-import { FiClock } from "react-icons/fi";
+import { Link } from "react-router-dom";
+
+import Layout from "./Layout";
 
 export default function HomePage() {
   return (
@@ -14,9 +15,8 @@ export default function HomePage() {
 
         <div className="max-w-2xl mx-auto">
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-            Organize your life simply and efficiently. TodoMaster helps you
-            manage your daily tasks without effort to stay productive and
-            focused on what really matters.
+            Organize your life simply and efficiently. TodoMaster helps you manage your daily tasks
+            without effort to stay productive and focused on what really matters.
           </p>
         </div>
 
@@ -44,7 +44,9 @@ export default function HomePage() {
             <div className="text-indigo-500 mb-4 flex justify-center">
               <TbCheckupList className="text-[3rem]" />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Easy to use</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+              Easy to use
+            </h3>
             <p className="text-gray-600 dark:text-gray-300">
               Intuitive interface to manage your tasks.
             </p>
@@ -54,7 +56,9 @@ export default function HomePage() {
             <div className="text-indigo-500 mb-4 flex justify-center">
               <FiClock className="text-[3rem]" />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Fast and reactive</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+              Fast and reactive
+            </h3>
             <p className="text-gray-600 dark:text-gray-300">
               Smooth experience to allow you to work fast.
             </p>
@@ -64,7 +68,9 @@ export default function HomePage() {
             <div className="text-indigo-500 mb-4 flex justify-center">
               <IoMdGlobe className="text-[3rem]" />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Work everywhere</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+              Work everywhere
+            </h3>
             <p className="text-gray-600 dark:text-gray-300">
               Access your tasks from any device, anywhere.
             </p>

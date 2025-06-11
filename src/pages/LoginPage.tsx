@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { supabase } from "@/supabaseClient";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
-import Layout from "./Layout";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import { supabase } from "@/supabaseClient";
+
+import Layout from "./Layout";
 
 type LoginForm = {
   email: string;
@@ -57,12 +59,8 @@ export default function LoginPage() {
       <div className="min-h-[60vh] flex items-center justify-center px-4">
         <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
           <div className="bg-indigo-600 dark:bg-indigo-700 p-6 text-white">
-            <h1 className="text-2xl font-bold text-center">
-              Welcome to TodoMaster
-            </h1>
-            <p className="text-indigo-100 text-center mt-2">
-              Login to manage your tasks
-            </p>
+            <h1 className="text-2xl font-bold text-center">Welcome to TodoMaster</h1>
+            <p className="text-indigo-100 text-center mt-2">Login to manage your tasks</p>
           </div>
 
           <form className="p-6 space-y-6">
@@ -154,9 +152,7 @@ export default function LoginPage() {
 
             <button
               type="button"
-              onClick={() =>
-                supabase.auth.signInWithOAuth({ provider: "google" })
-              }
+              onClick={() => supabase.auth.signInWithOAuth({ provider: "google" })}
               className="cursor-pointer w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors shadow-sm flex items-center justify-center font-medium text-gray-900 dark:text-gray-100"
             >
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">

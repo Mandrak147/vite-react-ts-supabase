@@ -12,8 +12,6 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      eslintImport.configs.recommended,
-      prettier.configs.recommended,
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -26,6 +24,13 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
       import: eslintImport,
       prettier: prettier,
+    },
+    settings: {
+      "import/resolver": {
+        typescript: {
+          project: ["./tsconfig.app.json", "./tsconfig.node.json"],
+        },
+      },
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -46,6 +51,14 @@ export default tseslint.config(
         }
       ],
       "prettier/prettier": "error",
+      "import/no-unresolved": "error",
+      "import/named": "error",
+      "import/namespace": "error",
+      "import/default": "error",
+      "import/export": "error",
+      "import/no-named-as-default": "warn",
+      "import/no-named-as-default-member": "warn",
+      "import/no-duplicates": "warn",
     },
   }
 );

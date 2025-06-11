@@ -1,15 +1,15 @@
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+
 import { AuthProvider } from "@/context/AuthContext";
 import { ThemeProvider } from "@/context/ThemeContext";
-import LoginPage from "@/pages/LoginPage";
 import DashboardPage from "@/pages/DashboardPage";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { queryClient } from "./libs/queryClient";
-import { ToastContainer } from "react-toastify";
-import { Routes } from "react-router-dom";
-import { Route } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
-import { ProtectedRoute } from "./ProtectedRoute";
 import HomePage from "@/pages/HomePage";
+import LoginPage from "@/pages/LoginPage";
+
+import { queryClient } from "./libs/queryClient";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export default function App() {
   return (
@@ -27,7 +27,7 @@ export default function App() {
             </Routes>
           </BrowserRouter>
 
-          <ToastContainer 
+          <ToastContainer
             theme="colored"
             className="dark:[&_.Toastify__toast]:bg-gray-800 dark:[&_.Toastify__toast]:text-white"
           />

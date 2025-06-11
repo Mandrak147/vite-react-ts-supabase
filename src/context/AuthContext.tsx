@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+
 import { supabase } from "@/supabaseClient";
 
 type AuthContextType = {
@@ -34,9 +35,5 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
   }, []);
 
-  return (
-    <AuthContext.Provider value={{ user, isLoading }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={{ user, isLoading }}>{children}</AuthContext.Provider>;
 };

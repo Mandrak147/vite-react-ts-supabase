@@ -28,9 +28,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   const getSystemTheme = (): "light" | "dark" => {
     if (typeof window !== "undefined") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
     return "light";
   };
@@ -56,7 +54,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
     updateActualTheme(newTheme);
-    
+
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", newTheme);
     }
@@ -77,7 +75,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     if (theme === "system" && typeof window !== "undefined") {
       const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
       const handleChange = () => updateActualTheme("system");
-      
+
       mediaQuery.addEventListener("change", handleChange);
       return () => mediaQuery.removeEventListener("change", handleChange);
     }

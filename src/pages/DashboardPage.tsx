@@ -1,6 +1,7 @@
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useAuth } from "@/hooks/useAuth";
 import { useSignOut } from "@/hooks/useSignOut";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 import Layout from "./Layout";
 
 export default function DashboardPage() {
@@ -33,9 +34,7 @@ export default function DashboardPage() {
               <div className="flex items-center gap-3">
                 <ThemeToggle />
                 <div className="flex items-center bg-indigo-700/50 rounded-full px-4 py-2 text-sm">
-                  <span className="mr-2 truncate max-w-[150px] sm:max-w-xs">
-                    {user.email}
-                  </span>
+                  <span className="mr-2 truncate max-w-[150px] sm:max-w-xs">{user.email}</span>
                   <button
                     onClick={() => handleSignOut()}
                     className="ml-2 cursor-pointer text-indigo-500 hover:text-white transition-colors flex items-center p-2 bg-indigo-100 hover:bg-indigo-600 rounded-lg"
@@ -63,7 +62,9 @@ export default function DashboardPage() {
 
           <div className="px-6 py-16 text-center">
             <div className="text-6xl mb-6">🚧</div>
-            <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-2">Em construção</h2>
+            <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Em construção
+            </h2>
             <p className="text-gray-500 dark:text-gray-400">Esta página está sendo desenvolvida</p>
           </div>
         </div>
